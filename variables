@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Documentation</title>
+  </head>
+  <body>
+    <script>
+      //Declare a variable.
+      var myVariable;
+      
+      //Assign a value with a string
+      myVariable = "hello, world!";
+
+      //Declare a variable with an value
+      var myVariable = "another hello world";
+      
+      //Declare a variable with an integer
+      var myNumber = 123;
+    </script>
+  </body>
+</html>
