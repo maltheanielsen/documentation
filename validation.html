@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Documentation</title>
+  </head>
+  <body>
+  <!--HTML FORM-->
+    <form name="myForm" onsubmit="return validateForm()">
+      Fornavn: <input type="text" name="fname">
+      Efternavn: <input type="text" name="lname">
+      Email: <input type="text" name="email">
+      Telefon: <input type="number" name="phone">
+      <input type="submit" value="Submit">
+    </form>
+    <script>
+    //Function to validate HTML form
+      function validateForm() {
+        var a = document.forms["myForm"]["fname"].value;
+        var b = document.forms["myForm"]["lname"].value;
+        var c = document.forms["myForm"]["email"].value;
+        var d = document.forms["myForm"]["phone"].value;
+        if (a == "") {
+          alert("Udfyld fornavn");
+          return false;
+        }
+        else if(b == "") {
+          alert("Udfyld efternavn");
+          return false;
+        }
+        else if(validateEmail(c)==false) {
+          alert("Udfyld email");
+          return false;
+        }
+        else if(d == "") {
+          alert("Udfyld telefonnummer");
+          return false;
+        }
+      }
+      
+      //Validate email helper function
+    function validateEmail(email) 
+    {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+    </script>
+  </body>
+</html>
